@@ -18,7 +18,7 @@ const isPrime = number => {
     }
 
     // Edge cases for early return
-    if (number % 2 == 0 || number % 3 == 0) {
+    if (number % 2 === 0 || number % 3 === 0) {
         return false;
     }
 
