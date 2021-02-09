@@ -1,7 +1,7 @@
 module.exports = {
 	bail: true,
 	moduleFileExtensions: ['js', 'json'],
-    rootDir: './tests/',
+	rootDir: './tests/',
 	testEnvironment: 'node',
 	verbose: true,
 };
