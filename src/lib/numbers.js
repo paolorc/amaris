@@ -1,4 +1,8 @@
 const isPrime = number => {
+    if(isNaN(number)) {
+        return false;
+    }
+
     if (number < 1) {
         return false;
     }
