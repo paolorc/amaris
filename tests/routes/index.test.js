@@ -1,4 +1,3 @@
-const { test, describe } = require('@jest/globals');
 const request = require('supertest');
 const server = require('../../src/server');
 
