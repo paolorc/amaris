@@ -1,14 +1,14 @@
-const { isPrime } = require('../lib/numbers');
+const { getPrimesNumbersList } = require('../lib/numbers');
 
 const calculatePrimesNumbers = (req, res) => {
     const { number } = req.params;
 
     try {
-        if (isNaN(number)) {
-            throw Error('Only numbers allowed');
-        }
+        const primesNumbersList = getPrimesNumbersList(number);
 
-        return res.status(200).json({ isPrime: isPrime(number) });
+        return res.status(200).json({
+            primesNumbersList,
+        });
     } catch (error) {
         return res.status(400).json({ message: error.message });
     }

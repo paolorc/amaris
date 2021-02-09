@@ -1,3 +1,4 @@
+#All ${..} are coming from .env file, this should only exist in production ready containers
 version: '3.8'
 
 services:
@@ -9,7 +10,7 @@ services:
     volumes:
       - ./:/usr/src/app
     environment:
-      # we set our environment variables for the container app
+      # we set our environment variables in the container app
       PORT: ${CONTAINER_PORT}
     ports:
       - ${APP_PORT}:${CONTAINER_PORT}
