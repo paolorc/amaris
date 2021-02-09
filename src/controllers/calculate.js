@@ -1,4 +1,3 @@
-const { restart } = require('nodemon');
 const { isPrime } = require('../lib/numbers');
 
 const calculatePrimesNumbers = (req, res) => {
