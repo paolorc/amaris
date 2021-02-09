@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: ${CONTAINER_NAME}
+    command: ['npm', 'start']
+    restart: always
+    build: ./
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      # we set our environment variables for the container app
+      PORT: ${CONTAINER_PORT}
+    ports:
+      - ${APP_PORT}:${CONTAINER_PORT}
