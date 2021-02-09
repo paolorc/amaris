@@ -5,6 +5,8 @@
   "main": "/src/index.js",
   "scripts": {
     "dev": "nodemon",
+    "docker-up": "docker-compose up -d",
+    "docker-down": "docker-compose down",
     "start": "node src/index.js",
     "test": "npx jest"
   },
