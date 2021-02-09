@@ -7,6 +7,7 @@ const calculatePrimesNumbers = (req, res) => {
         const primesNumbersList = getPrimesNumbersList(number);
 
         return res.status(200).json({
+            totalNumbers: primesNumbersList.length,
             primesNumbersList,
         });
     } catch (error) {

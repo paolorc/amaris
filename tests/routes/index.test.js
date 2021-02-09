@@ -10,6 +10,7 @@ describe('Route handlers', () => {
                     .get('/calculate/primes-numbers/7');
 
                 expect(res.statusCode).toEqual(200);
+                expect(res.body.totalNumbers).toEqual(expectedResult.length);
                 expect(res.body.primesNumbersList).toEqual(expectedResult);
 
             } catch (error) {
@@ -24,6 +25,7 @@ describe('Route handlers', () => {
                     .get('/calculate/primes-numbers/5');
 
                 expect(res.statusCode).toEqual(200);
+                expect(res.body.totalNumbers).toEqual(expectedResult.length);
                 expect(res.body.primesNumbersList).toEqual(expectedResult);
 
             } catch (error) {

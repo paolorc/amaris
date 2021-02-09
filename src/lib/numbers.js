@@ -8,7 +8,7 @@ const isPrime = number => {
         return false;
     }
 
-    // Edge cases
+    // Edge case
     if (number < 1) {
         return false;
     }
@@ -23,8 +23,8 @@ const isPrime = number => {
     }
 
     // Evaluate possibility in less loops starting from 
-    for (var i = 5; i * i <= number; i = i + 6) {
-        if (number % i == 0 || number % (i + 2) == 0) {
+    for (var i = 5; i * i <= number; i++) {
+        if (number % i === 0) {
             return false;
         }
     }
@@ -41,20 +41,20 @@ const getPrimesNumbersList = number => {
     if (isNaN(number)) {
         throw Error('Only numbers allowed');
     }
-    
+
     let iterator = parseInt(number);
-    const numbersList = [];
+    const primesList = [];
 
     // Looping down the number received
     while (iterator >= 1) {
         if (isPrime(iterator)) {
-            numbersList.push(iterator)
+            primesList.push(iterator)
         }
-        
+
         iterator--;
     }
 
-    return numbersList;
+    return primesList;
 }
 
 module.exports = { getPrimesNumbersList, isPrime }
